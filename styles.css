@@ -130,3 +130,36 @@ footer .social-links li a:hover {
     font-size: 1rem;
   }
 }
+
+/* Navbar untuk Mobile */
+.hamburger {
+  display: none; /* Sembunyikan pada layar besar */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Tampilkan menu dalam posisi dropdown di layar kecil */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Sembunyikan menu */
+    flex-direction: column; /* Ubah menjadi vertikal */
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links.active {
+    display: flex; /* Tampilkan menu saat aktif */
+  }
+
+  .hamburger {
+    display: block; /* Tampilkan hamburger menu */
+  }
+}
