@@ -163,3 +163,38 @@ footer .social-links li a:hover {
     display: block; /* Tampilkan hamburger menu */
   }
 }
+
+/* Tools List Styling */
+.tools-list {
+  list-style: none;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.8); /* Latar belakang semi-transparan */
+  border-radius: 5px;
+}
+
+.tools-list li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.tools-list li a:hover {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+.tools-list {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tools-list.active {
+  opacity: 1;
+  transform: scaleY(1);
+}

@@ -15,6 +15,19 @@ document.getElementById("contactButton").addEventListener("click", function () {
   alert("Bajingan!");
 });
 
+// Ambil elemen hamburger, menu utama, dan tools list
+const hamburgerButton = document.getElementById("hamburgerButton");
+const navMenu = document.getElementById("navMenu");
+const toolsList = document.getElementById("toolsList");
+
+// Event untuk toggle menu
+hamburgerButton.addEventListener("click", () => {
+  navMenu.classList.toggle("active"); // Toggle menu utama
+  toolsList.classList.toggle("active");
+  toolsList.style.display =
+    toolsList.style.display === "none" ? "block" : "none"; // Toggle tools list
+});
+
 // Tombol Subscribe
 document
   .querySelector(".subscribe-button")
